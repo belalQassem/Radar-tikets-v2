@@ -10,11 +10,6 @@ height: 100%;
 width: 100%;
 grid-area:sidbar;
 box-sizing: border-box;
-/* @media (max-width: 1200px) {
-    width: 10%;
-    height: 70dvh;
-    } */
-
 `
 export const SidbarContent =styled.div`
 height: 100%;
@@ -43,7 +38,7 @@ export const StyledContainerModal = styled.div`
   width: 70%;
   background-color: #fff;
   border: 2px solid #084F5F;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);/* Fixed box-shadow syntax */
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
   padding: 3px;
 `;
 

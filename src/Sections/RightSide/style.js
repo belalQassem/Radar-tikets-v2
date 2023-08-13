@@ -24,9 +24,8 @@ grid-template-areas:
 export const StyledImageDiv = styled.img`
 height: 100%;
 width: 100%;
-object-fit: cover;
 box-sizing: border-box;
-overflow-y:scroll;
+overflow-y: scroll;
 grid-area:ImgDiv;
 `
 export const Items = styled.div`
