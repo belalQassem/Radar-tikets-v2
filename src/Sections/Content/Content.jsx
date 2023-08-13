@@ -69,15 +69,16 @@ const Content = () => {
 
   return (
     <StyledDiv>
-      <StyledImageDiv src={Display2} alt='croped' />
+      <StyledImageDiv src={Display2} alt='croped' loading='lazy' />
       <StyledVideo>
-        <StyledVideoScene controls>
+        <StyledVideoScene controls >
           <source src={Video} type="video/mp4" />
         </StyledVideoScene>
       </StyledVideo>
       <StyledSecondDiv>
         <StyledImagebig
           src={Display2}
+          loading='lazy'
           alt="Display two"
           onMouseDown={handleImageMouseDown}
           onMouseMove={handleImageMouseMove}
