@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
-import Display2 from "../../assets/ContentImages/acura-rear-gac7a35b29_1280.jpg";
+import Display2 from "../../assets/ContentImages/92/R002165230616013554A.jpg";
 import { MdCloseFullscreen } from "react-icons/md";
 import { styled } from "styled-components";
 import {

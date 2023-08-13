@@ -19,6 +19,7 @@ align-items: center;
 flex-direction: column;
 background-color: #e8e8e8;
 color: black;
+padding-left: 3px;
 `
 export const StyledNestedDiv = styled.div`
 width:100%;

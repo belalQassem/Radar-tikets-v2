@@ -25,7 +25,7 @@ display: inline-block;
 width:100%;
 height:100%;
 grid-area:image1;
-object-fit: cover;
+
 box-sizing: border-box;
 `
  export const StyledImagebig = styled.img`
@@ -34,7 +34,6 @@ box-sizing: border-box;
    height: 100%;
    width: 100%;
    box-sizing: border-box;
-   object-fit: cover;
 `;
 export const StyledSecondDiv = styled.div`
 position:relative;
@@ -97,6 +96,11 @@ export const StyledVideo = styled.div`
 grid-area:video;
 height:100%;
 width: 100%;
+`
+export const StyledVideoScene = styled.video`
+height: 100%;
+width: 100%;
+object-fit: fill;
 `
 export const StyledClearButton = styled.button`
 position: absolute;

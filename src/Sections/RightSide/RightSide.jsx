@@ -20,7 +20,7 @@ const RightSide = () => {
 
   return (
     <StyledDiv>
-      <StyledImageDiv src={croppedImage} alt="cropped IMAGE" />
+      <StyledImageDiv src={croppedImage || null} alt="cropped IMAGE" />
       <BoardSourceDetails formData={vehicleData} onChange={onChange} /> 
       <VehicleDetails formData={vehicleData} onChange={onChange} />
 
