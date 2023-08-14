@@ -52,6 +52,9 @@ export const StyledExpandIcon = styled(FaExpandAlt)`
   left: 2%;
   cursor: pointer;
   z-index: 999;
+  &:active{
+    color: #084F5F;
+}
   
 `;
 export const StyledIconsDiv = styled.div`
@@ -77,12 +80,18 @@ export const StyledArrowIcon = styled(GoTriangleDown)`
   right: 2%;
   cursor: pointer;
   z-index: 999;
+  &:active{
+    color: #8e8e8e;
+}
   `
 export const StyledPlusIcon = styled(BsPlusLg)`
   font-size: 1.6rem;
   color: #616161;
   cursor: pointer;
   z-index: 999;
+  &:active{
+    color: #8e8e8e;
+}
 
 `;
 export const StyledMinusIcon = styled(PiMinus)`
@@ -90,6 +99,9 @@ export const StyledMinusIcon = styled(PiMinus)`
   color: #616161;
   cursor: pointer;
   z-index: 999;
+  &:active{
+    color: #8e8e8e;
+}
 `;
 
 export const StyledVideo = styled.div`
@@ -101,15 +113,4 @@ export const StyledVideoScene = styled.video`
 height: 100%;
 width: 100%;
 object-fit: fill;
-`
-export const StyledClearButton = styled.button`
-position: absolute;
-top: 2%;
-right: 2%;
-height: 5%;
-width: 5%;
-background-color: #fff;
-border: none;
-cursor: pointer;
-z-index: 999;
 `

@@ -12,9 +12,6 @@ import {
   StyledMdBrightnessHigh,
   StyledMdBrightnessLow,
   StyledMdPreview,
- 
-  // StyledMdOutlineImageSearch,
-  // StyledMdOutlineSmartDisplay,
   StyledFaExchangeAlt,
   StyledVscColorMode,
   StyledPiGraphDuotone,
@@ -51,6 +48,10 @@ const FullScreenExit = styled(MdCloseFullscreen)`
   left: 12px;
   display: block;
   cursor: pointer;
+  &:active{
+    background-color:#084F5F;
+    color: #fff;
+}
 `;
 const StyledMain = styled.div`
   width: 100%;
@@ -93,14 +94,14 @@ export default function BasicModal({ imageUrl, onClose, isOpen }) {
   };
 
   const handleZoomIn = () => {
-    if (zoomLevel < 3) {
-      setZoomLevel(prevZoom => prevZoom + 0.2);
+    if (zoomLevel < 10) {
+      setZoomLevel(prevZoom => prevZoom +0.5);
     }
   };
 
   const handleZoomOut = () => {
     if (zoomLevel > 1) {
-      setZoomLevel(prevZoom => prevZoom - 0.2);
+      setZoomLevel(prevZoom => prevZoom - 0.5);
     }
   };
 
@@ -158,7 +159,6 @@ export default function BasicModal({ imageUrl, onClose, isOpen }) {
                   <StyledVscColorMode onClick={() => setColorMode(prevColorMode => !prevColorMode)} />
                   <StyledMdPreview onClick={handleToggleOriginalPreview} />
                   <StyledFaExchangeAlt onClick={handleImageFlip} />
-                  
                   <StyledPiGraphDuotone />
                   <StyledMdUpdate />
                 </SidbarContent>
