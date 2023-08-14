@@ -34,8 +34,6 @@ const Content = () => {
     const rect = imageRef.current.getBoundingClientRect();
     const width = clientX - rect.left - drawingCoords.x;
     const height = clientY - rect.top - drawingCoords.y;
-
-
     setDrawingCoords((prevCoords) => ({ ...prevCoords, width, height }));
   };
 
@@ -85,7 +83,6 @@ const Content = () => {
           onMouseUp={handleImageMouseUp}
           ref={imageRef}
         />
-        {isDrawing && (
           <div
             style={{
               position: 'absolute',
@@ -94,9 +91,7 @@ const Content = () => {
               width: drawingCoords.width,
               height: drawingCoords.height,
             }}
-          />
-        )}
-
+          /> 
         <StyledExpandIcon onClick={() => handleExpandClick("../../assets/ContentImages/92/R002165230616013554A.jpg")} />
         <StyledArrowIcon />
         <StyledIconsDiv>
