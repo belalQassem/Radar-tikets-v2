@@ -23,8 +23,8 @@ import {
 
 
 const StyledDiv = styled.div`
-  height: 50%;
-  width:50%;
+  height: 70%;
+  width:70%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -62,18 +62,21 @@ const StyledMain = styled.div`
   grid-template-columns: 4fr 2rem;
   grid-template-areas: "empty sidbar ";
 `;
-const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
 const StyledDiv2 = styled.div`
+  position:relative;
   width: 100%;
   height: 100%;
-  grid-area: empty;
-  overflow: hidden;
-  `
-
+  display: block;
+  grid-area:empty;
+  box-sizing: border-box;
+  overflow:scroll;
+`;
+const StyledDivNested = styled.div`
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background: url(${Display2}) center center / cover no-repeat;
+`
 
 
 export default function BasicModal({ imageUrl, onClose, isOpen }) {
@@ -115,7 +118,11 @@ export default function BasicModal({ imageUrl, onClose, isOpen }) {
     setIsFlipped(prevIsFlipped => !prevIsFlipped);
   };
   const handleToggleOriginalPreview = () => {
-    setOriginalPreview(prevPreview => !prevPreview);
+    setZoomLevel(1);
+    setBrightnessLevel(1);
+    setColorMode(true)
+    setIsFlipped(false)
+    setOriginalPreview(false)
   };
   return (
     <div>
@@ -132,22 +139,14 @@ export default function BasicModal({ imageUrl, onClose, isOpen }) {
 
             <StyledMain >
               <StyledDiv2>
-                <StyledImage
-                  src={Display2}
-                  alt="Display"
-                  style={{
+                <StyledDivNested style={{
                     transform: `scale(${zoomLevel}) ${isFlipped ? 'scaleX(-1)' : ''}`, 
                     filter: `brightness(${brightnessLevel}) ${colorMode ? '' : 'grayscale(100%)'}`,
                     display: originalPreview ? 'none' : 'block',  
-                  }}
-                />
-                {originalPreview && (
-                  <StyledImage
-                    src={Display2}
-                    alt="Original Display"
-                    style={{ display: 'block' }}
-                  />
-                )}
+                  }}>
+                  
+                </StyledDivNested>
+               
               </StyledDiv2>
 
               <SidbarContainer>

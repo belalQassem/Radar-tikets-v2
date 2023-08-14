@@ -83,6 +83,7 @@ height: 1.6rem;
 width: 1.6rem;
 color: #053742;
 cursor: pointer;
+
 `
 export const StyledMdOutlineSmartDisplay= styled(MdOutlineSmartDisplay)`
 height: 1.6rem;
