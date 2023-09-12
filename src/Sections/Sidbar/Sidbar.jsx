@@ -5,13 +5,20 @@ import Speed from '../../assets/SidbarIcons/speed.png'
 import Traffic  from '../../assets/SidbarIcons/game-icons_traffic-lights-red.png'
 import Truck  from '../../assets/SidbarIcons/truck.png'
 import Management  from '../../assets/SidbarIcons/icon-management.png'
+import {StyledLogout} from './style'
 
 import { NavLink } from 'react-router-dom';
+import { useAuthContext } from '../../context/AuthContext'
 
 
 
 
 const Sidbar = () => {
+  const {  setisAuthorized, } = useAuthContext();
+  const handleLogin = () => {
+    setisAuthorized(false);
+    localStorage.removeItem("token");
+  };
   return (
     <SidbarContainer>
         <SidbarContent>
@@ -30,6 +37,7 @@ const Sidbar = () => {
       <NavLink to="/dashboard/user/management" >
         <StyledImage src={Management} alt="Icon 5" />
       </NavLink>
+      <StyledLogout onClick={handleLogin} alt="exit"/>
             
     
         </SidbarContent>
