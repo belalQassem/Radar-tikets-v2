@@ -239,6 +239,7 @@ export const Button = styled.button`
 export const Button1 = styled(Button)`
         padding: 0.5em;
         border-radius: 5px;
+        margin-bottom: 5em;
         transition: .4s ease-in-out;
         border: none;
         outline: none;
@@ -248,20 +249,5 @@ export const Button1 = styled(Button)`
         &:hover{
           background-image: linear-gradient(163deg, #00642f 0%, #13034b 100%);
         color: rgb(0, 255, 200);
-  }
-        `;
- export const Button3 = styled(Button)`
-        margin-top: 0.2em;
-        margin-bottom: 3em;
-        padding: 0.5em;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        transition: .4s ease-in-out;
-        background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
-        color: rgb(0, 0, 0);
-        &:hover {
-          background-image: linear-gradient(163deg, #a00000fa 0%, #d10050 100%);
-        color: rgb(255, 255, 255);
   }
         `;

@@ -15,7 +15,6 @@ import {
   ICONShow,
   ICONHide,
   Button1,
-  Button3,
 } from "./style";
 
 import { useNavigate } from "react-router-dom";
@@ -28,7 +27,6 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .required("Password is required")
     .min(6, "Password must be at least 6 characters long"),
-  otp: Yup.string(),
 });
 
 const Login = () => {
@@ -130,7 +128,6 @@ const Login = () => {
             <Button1 type="submit">
               {isLoading ? "Loading ... " : "LOG IN"}
             </Button1>
-            <Button3>Forgot Password</Button3>
           </Form>
         </Card2>
       </Card>
